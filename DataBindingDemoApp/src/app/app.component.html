@@ -1,0 +1,44 @@
+<h1 style="text-align: center;"> Example with Data Binding</h1>
+<hr>
+
+<div>
+  <h4><b><u>Interpolation Syntax</u></b></h4>
+  <b>
+    FirstName is : {{firstName}}<br>
+    LastName is : {{lastName}} <br>
+    Age is : {{age}} <br>
+    AcceptTernms : {{acceptTerms}} <br>
+    Gender : {{gender}}<br>
+    Country : {{country}}
+  </b>
+  <hr>
+  <h4><u>Two Way Data Binding</u></h4>
+  <br>
+
+  FirstName : <input type="text" [(ngModel)]="firstName"><br>
+  LastName : <input type="text" [(ngModel)]="lastName"><br>
+  Age : <input type="text" [(ngModel)]="age"><br>
+  Accept Terms : <input type="checkbox" [(ngModel)]="acceptTerms"><br>
+  Gender :
+  <input type="radio" value="Male" [(ngModel)]="gender"><span>Male</span>
+  <input type="radio" value="Female" [(ngModel)]="gender"><span>Female</span><br>
+  Country:
+  <select [(ngModel)]="country">
+    <option value="">Select Country</option>
+    <option>India</option>
+    <option>USA</option>
+    <option>France</option>
+    <option>UK</option>
+  </select>
+  <hr>
+  <h4><u><b>Property Syntax</b></u> </h4>
+  <a [href]="webLink">Naresh Technologies</a>
+  <img [src]="imgUrl" height="150px" width="250px" alt="AaravIMage">
+  <hr>
+
+  <h4> <u>Event Binding </u></h4>
+  <input type="button" value="Change Data" (click)="changeData()" />
+
+  <hr>
+  
+</div>

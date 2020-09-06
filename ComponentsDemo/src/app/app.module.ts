@@ -5,16 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import {FirstComponent} from './first.component';
 import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
+import {HomeModule} from './Home.module';
 
 @NgModule({
   declarations: [
    FirstComponent,
-   SecondComponent,
-   ThirdComponent
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule  
   ],
   providers: [],
   bootstrap: [FirstComponent]
