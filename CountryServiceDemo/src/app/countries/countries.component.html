@@ -1,0 +1,20 @@
+<div class="container">
+    <h1 class="text-center"> Countries Information </h1>
+    <table class="table tabl-hover table-border table-stried">
+        <tr>
+            <th>Country Name</th>
+            <th>Capital</th>
+            <th>Flag</th>
+        </tr>
+        <tr *ngFor="let country of countries | paginate:{id:'list',itemsPerPage:10,currentPage:page,totalItems:totalRecords}">
+            <td>{{country.name}}</td>
+            <td>{{country.capital}}</td>
+            <td>
+                <img [src]="country.flag" height="50px" width="100px" />
+            </td>
+        </tr>
+    </table>
+    <pagination-controls id="list" maxSize="10" directionLinks="true" responsive="true" previousLabel="Previous"
+        nextLabel="Next" (pageChange)="page = $event">
+    </pagination-controls>
+</div>
